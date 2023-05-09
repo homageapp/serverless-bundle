@@ -446,6 +446,10 @@ module.exports = {
     // before looking inside the project's node_modules.
     modules: [path.resolve(__dirname, "node_modules"), "node_modules"],
     plugins: resolvePlugins(),
+    extensionAlias: {
+      '.js': ['.ts', '.js'],
+      '.mjs': ['.mts', '.mjs'],
+    },
   },
   // Add loaders
   module: loaders(),
